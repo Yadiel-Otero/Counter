@@ -34,59 +34,82 @@ function editCount() {
     }
 }
 
-  //this is the modal
-  let modal = document.getElementById('modal');
+//this is the modal
+let modal = document.getElementById('modal');
 
-  //this is the edit button (pencil at the top)
-  let editButton = document.getElementById('edit-button');
+//this is the edit button (pencil at the top)
+let editButton = document.getElementById('edit-button');
 
-  //this variable controls the editing state (false by default)
-  let isEditing = false;
- 
+//this variable controls the editing state (false by default)
+let isEditing = false;
 
-  //------------------------- PENDING IMPLEMENTATION ----------------------------//
+//------------------------- PENDING IMPLEMENTATION ----------------------------//
 
-  function toggleEdit(){
-      /*************************************************************************************
+function toggleEdit() {
+    /*************************************************************************************
 
-      Note: this function is applied to the #edit-button button as onClick = "toggleEdit()"
+    Note: this function is applied to the #edit-button button as onClick = "toggleEdit()"
 
-      Description: this function will make the modal visible 
-                   IF it is not ALREADY visible. It will also
-                   make the modal invisible IF it is ALREADY
-                   visible.
+    Description: this function will make the modal visible 
+                 IF it is not ALREADY visible. It will also
+                 make the modal invisible IF it is ALREADY
+                 visible.
 
-      -o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-
+    -o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-
 
-      General logic:
+    General logic:
 
-      If NOT editing:
+    If NOT editing:
 
-      1. make the modal visible
-      2. set the editButton animation property to: float 1s ease-in-out infinite
-      3. make isEditing true
+    1. make the modal visible X
+    2. set the editButton animation property to: float 1s ease-in-out infinite
+    3. make isEditing true
 
-      else if editing:
+    else if editing:
 
-      1. make the modal invisible
-      2. set the editButton animation property to: none
-      3. make isEditing false   
-      
-      ************************************************************************************/
-  }
+    1. make the modal invisible
+    2. set the editButton animation property to: none
+    3. make isEditing false   
+    
+    ************************************************************************************/
+    if (isEditing == false) {
+        modal.style = "display:flex";
+        editButton.style = "animation:float 1s ease-in-out infinite";
+        isEditing = true;
+    }
+    else {
+        modal.style = "display:none";
+        editButton.style = "animation:none";
+        isEditing = false;
+    }
+
+}
 
 
-  function submit() {
-      /***********************************************************************************
-      
-      Note: this function is applied to the #submit-modal button as onClick="submit()"
+function submit() {
+    /***********************************************************************************
+    
+    Note: this function is applied to the #submit-modal button as onClick="submit()"
 
-      Description: this function will take the values entered in the 
-                   title-modal and value-modal input boxes and update 
-                   the #counter-name div and #number div respectively.
+    Description: this function will take the values entered in the 
+                 title-modal and value-modal input boxes and update 
+                 the #counter-name div and #number div respectively.
+                 additionally, when the submit button is clicked
+                 the modal should close automatically.
+                 
+    ***********************************************************************************/
+    let title = document.getElementById("title-modal").value;
+    document.getElementById("title-modal").value = "";
 
-                   additionally, when the submit button is clicked
-                   the modal should close automatically.
-                   
-      ***********************************************************************************/
-  }
+    let Name = document.getElementById("counter-name");
+    Name.innerText = title;
+
+    let value = document.getElementById("value-modal").value;
+    document.getElementById("value-modal").value = "";
+
+    let number = document.getElementById("number");
+    number.innerText = value;
+    counter = parseInt(value);
+
+    toggleEdit();
+}
