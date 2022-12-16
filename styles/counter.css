@@ -1,0 +1,8 @@
+#counter {
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    width: 450px;
+    background-color: #303030;
+    margin: auto;
+}

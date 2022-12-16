@@ -1,0 +1,45 @@
+.toolbar{
+    display: flex;
+    height: 46px;
+    justify-content: space-between;
+    background-color: #212121;
+    
+}
+
+#counter-name{
+    margin-left: 6px;
+    margin-top: 4px;
+    background: none;
+    border: none;
+    color: white;
+    font-family: arial;
+    font-size: 34px;
+    width: 330px;
+}
+
+@keyframes float {
+    0%{
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(0.5);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+#clear-button, #edit-button{
+    background: none;
+    border: none;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;    
+    transition: all 30ms ease-in-out;
+}
+
+#clear-button:active, #edit-button:active{
+    transform: scale(0.7);
+}
