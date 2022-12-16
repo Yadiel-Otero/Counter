@@ -1,2 +1,29 @@
-1. in the project folder run git init
-2. run git add . (dot represents current folder the cmd line is running in)
+1. in the project folder run 'git init'
+2. run 'git add .' (dot represents current folder the cmd line is running in)
+3. run 'git commit -m "message"'
+
+
+if you make mistake in previous commit:
+
+1. git add .
+2. git commit -m "message" --amend (amend means edit last commit, not make a new one)
+
+
+if you want to remove files from staging area:
+
+1. git reset filename or .
+
+
+if you want to go to view a specific version:
+
+1. git checkout hash
+
+
+if you want to view version graph:
+1. git log --all --graph
+
+
+if you want to restore a specific version:
+
+git checkout hash .
+
