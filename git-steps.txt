@@ -1,2 +1,11 @@
-1. in the project folder run git init
-2. run git add . (dot represents current folder the cmd line is running in)
+1. in the project folder run 'git init'
+2. run 'git add .' (dot represents current folder the cmd line is running in)
+3. run 'git commit -m "message"'
+
+
+if you make mistake in previous commit:
+
+1. git add .
+2. git commit -m "message" --amend (amend means edit last commit, not make a new one)
+
+change
