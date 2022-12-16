@@ -35,3 +35,11 @@ if you want to restore a specific version:
 
 
 
+identifying yourself before making a push
+
+1. git config --global credential.username "Yadiel-Otero"
+
+
+making a push
+
+1. git push origin master

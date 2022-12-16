@@ -66,6 +66,11 @@ body{
     font-size: 40px;
     color: white;
     cursor: pointer;    
+    transition: all 30ms ease-in-out;
+}
+
+#clear-button:active, #edit-button:active{
+    transform: scale(0.7);
 }
 
 #screen {
@@ -105,7 +110,7 @@ body{
     background-color: #5a5a5c;
     border: none;
     cursor: pointer;
-    transition: all 15ms ease-in-out;
+    transition: all 30ms ease-in-out;
 }
 
 #add-button:active,
