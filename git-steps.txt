@@ -2,6 +2,12 @@
 2. run 'git add .' (dot represents current folder the cmd line is running in)
 3. run 'git commit -m "message"'
 
+add repository to remote repository
+
+1. create repo in github
+2. copy https link
+3. git remote add origin link
+
 
 if you make mistake in previous commit:
 
@@ -25,5 +31,7 @@ if you want to view version graph:
 
 if you want to restore a specific version:
 
-git checkout hash .
+1. git checkout hash .
+
+
 
