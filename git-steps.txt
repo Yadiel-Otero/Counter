@@ -1,0 +1,2 @@
+1. in the project folder run git init
+2. run git add . (dot represents current folder the cmd line is running in)

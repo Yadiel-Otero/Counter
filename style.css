@@ -1,0 +1,188 @@
+@keyframes gradient{
+    0%{
+        background-position: 0 50%;
+    }
+
+    50%{
+        background-position: 100% 50%;
+    }
+
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+body{
+    background: linear-gradient(45deg, #d2001a, #7462ff, #f48e21, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 12s ease-in-out infinite;
+}
+
+#counter {
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    width: 450px;
+    background-color: #303030;
+    margin: auto;
+}
+
+.toolbar{
+    display: flex;
+    height: 46px;
+    justify-content: space-between;
+    background-color: #212121;
+    
+}
+
+#counter-name{
+    margin-left: 6px;
+    margin-top: 4px;
+    background: none;
+    border: none;
+    color: white;
+    font-family: arial;
+    font-size: 34px;
+    width: 330px;
+}
+
+@keyframes float {
+    0%{
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(0.5);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+#clear-button, #edit-button{
+    background: none;
+    border: none;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;    
+}
+
+#screen {
+    position: relative;
+    display: flex;
+    flex: 3;
+    align-items: center;
+    justify-content: center;
+}
+
+#number {
+    color: white;
+    font-family: arial;
+    font-size: 120px;
+}
+
+.buttons-section {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+
+
+#add-button,
+#minus-button {
+    margin-left: 16px;
+    margin-right: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    justify-content: space-around;
+    font-family: arial;
+    font-size: 64px;
+    color: white;
+    background-color: #5a5a5c;
+    border: none;
+    cursor: pointer;
+    transition: all 15ms ease-in-out;
+}
+
+#add-button:active,
+#minus-button:active{
+   transform: scale(0.95);
+}
+
+#add-button {
+    margin-bottom: 12px;
+}
+
+@keyframes pop-modal{
+    0%{transform: scale(0);}
+    100%{transform: scale(1);}
+}
+
+#modal{
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    background-color: #5a5a5c;
+    height: 250px;
+    width: 350px;
+    font-family: arial;
+    color: white;
+    padding: 16px;
+    animation: pop-modal 0.5s;
+}
+
+
+#modal > div{
+    cursor: default;
+    font-size: 24px;
+    margin-bottom: 32px;
+}
+
+#title-modal, #value-modal{
+    background: none;
+    font-size: 24px;
+    margin-bottom: 32px;
+    border: none;
+    border-bottom: 1px solid lightgrey;
+    color: white;
+}
+
+#title-modal:focus-visible, #value-modal:focus-visible{
+    outline: none;
+}
+
+#title-modal::placeholder, #value-modal::placeholder{
+   color: white;
+}
+
+@keyframes shake {
+    0%{
+        transform: rotate(-5deg);
+    }
+
+    50%{
+        transform: rotate(5deg);
+    }
+
+    100%{
+        transform: rotate(-5deg);
+    }
+}
+#submit-modal{
+    margin-top: 24px;
+    font-size: 24px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 15ms ease-in-out;
+    animation: shake 0.7s ease-in-out infinite;
+    
+}
+
+
+
